@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	sizeof % lu
+	printf sizeof % lu
 	return (0);
 }
