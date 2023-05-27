@@ -4,18 +4,13 @@
  * Return: 0 (Success)
  */
 	int main(void)
-
 {
 
 	char letter;
 
-	/* print uppercase letter */
-
 	for (letter = 'a' ; letter <= 'z' ; letter++)
 
 		putchar (letter);
-
-	/* print lowercase letters */
 
 	for (letter = 'A' ; letter <= 'Z' ; letter++)
 
