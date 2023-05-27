@@ -5,11 +5,11 @@
  */
 	int main(void)
 {
-	char c;
+	char letter;
 
-	for (c = 'z'; c >= 'a'; ++c)
+	for (letter = 'z'; letter >= 'a'; letter--)
 
-	printf("%c", c);
+	putchar(letter);
 
 	return (0);
 }
