@@ -12,7 +12,8 @@
 		putchar((num % 10) + '0');
 		if (num == 10)
 			continue;
-		putchar(' ' && ',' && ' ');
+		putchar(' ');
+		putchar(',');
 	}
 	putchar('\n');
 
