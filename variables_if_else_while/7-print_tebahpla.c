@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - alphabet backwards
+ * main - Smile in the mirror
+ * Return: 0 (Success)
  */
 	int main(void)
 {
