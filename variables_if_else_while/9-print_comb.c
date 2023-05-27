@@ -14,6 +14,7 @@
 			continue;
 		putchar(',');
 		putchar(' ');
+		putchar(',');
 	}
 	putchar('\n');
 
