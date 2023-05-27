@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * main - Print base 10 numbers
+ * main - Print base 10 number
+ *
+ * Return: 0 (Success)
  */
-
-	int main(void)
+int main(void)
 {
 	int num;
 
