@@ -1,12 +1,19 @@
-#include <stdio.h>
+#include "main.h"
+#include <unistd.h>
 /**
- * main - _putchar
- * Return: 0 (Success)
+ * main - -putchar
+ * Return: 0
  */
 int main(void)
 {
-	printf("_putchar\n");
+	char c[] = "_putchar";
+	int x;
+
+	for (x = 0; x < 9; x++)
+	{
+		_putchar(c[x]);
+	}
+	_putchar('\n');
 
 	return (0);
-
 }
