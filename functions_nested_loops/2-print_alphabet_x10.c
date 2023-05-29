@@ -4,12 +4,18 @@
  */
 void print_alphabet_x10(void)
 {
-	char c[] = "abcdefghijklmnopqrstuvwxyz";
-	int x;
+	char c;
+	int i = 0;
 
-	for (x = 0; x < 26; x++)
+	while (i <= 9)
 	{
-		_putchar(c[x]);
+
+		for (c = 'a'; c <= 'z'; c++)
+	{
+		_putchar(c);
 	}
 	_putchar('\n');
+
+	i++;
+	}
 }
