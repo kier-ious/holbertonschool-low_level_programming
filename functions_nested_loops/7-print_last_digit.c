@@ -2,7 +2,7 @@
 /**
  * print_last_digit - print last digit
  * @n: number to be calculated
- * Return: Always 0.
+ * Return: returns 0.
  */
 int print_last_digit(int n)
 {
@@ -11,7 +11,7 @@ int print_last_digit(int n)
 	if (lastdigit < 0)
 		lastdigit *= -1;
 
-	-putchar (lastdigit + '0');
+	-putchar(lastdigit + '0');
 		return (lastdigit);
 
 }
