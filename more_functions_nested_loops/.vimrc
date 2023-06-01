@@ -1,0 +1,2 @@
+synatx on
+set number
