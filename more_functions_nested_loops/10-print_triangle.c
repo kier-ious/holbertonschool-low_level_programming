@@ -3,7 +3,7 @@
 /**
  * print_triangle - Print a triangle
  * @size: size of the triangle
- * Return: 0 (success)
+ * Return: empty
  */
 void print_triangle(int size)
 {
@@ -17,15 +17,15 @@ void print_triangle(int size)
 	else
 	{
 		for (x = 0; x < size; x++)
-	{
-		for (y = 0; y < x; y++)
 		{
+			for (y = size - x; y > 1; y--)
+			{
 			putchar(32);
-		}
-		for (z = 0; z <= x; z++)
-		{
+			}
+			for (z = 0; z <= x; z++)
+			{
 			putchar(35);
-		}
+			}
 		putchar('\n');
 		}
 	}
