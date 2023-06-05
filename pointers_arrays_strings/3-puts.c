@@ -4,6 +4,7 @@
 /**
  * _puts - Write a function that prints a string
  * @*str: The string to print
+ * @str: Parameter
  * Return: void
  */
 void _puts(char *str)
