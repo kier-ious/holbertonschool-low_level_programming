@@ -4,13 +4,16 @@
 /**
   * rev_string - Prints a string in reverse
   * @s: The string to print
+  * @n: variable
   * Return: void
   */
 void rev_string(char *s)
 {
-	int n = (strlen(*s) - 1) / 2;
+	int i;
+
+	for (i = strlen(s) - 1; i >= 0; i--)
 	{
-		_putchar(s[n]);
+		_putchar(s[i]);
 	}
-	_putchar('\n');
+		_putchar('\n');
 }
