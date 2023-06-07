@@ -8,18 +8,18 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int stringD, stringS;
+	int lengthD = 0;
+	int lengthS = 0;
 
-	int stringD = 0;
-	int stringS = 0;
+	while (*(dest + lengthD) != '\0')
+		lengthD++;
 
-	while (dest + stringD != '\0')
-		stringD++;
-	while (src + stringS != '\0' && stringD < 99)
+	while (*(src + lengthS) != '\0' && lengthD < 99)
 	{
-		stringD++;
-		stringS++;
+		*(dest + lengthD) = *(src + lengthS);
+		lengthD++;
+		lengthS++;
 	}
-		(dest + stringD = src + stringS);
+		*(dest + lengthD) = '\0';
 		return (dest);
 }
