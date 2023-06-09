@@ -8,11 +8,10 @@
 char *cap_string(char *str)
 {
 	int i = 0;
-	int capitalize = 0;
 
 	while (*(str + i) != '\0')
 	{
-	if (*(str + i) >= 'a' && *(str + i) <= 'z')
+	if (*(str + i) >= 'A' && *(str + i) <= 'Z')
 		{
 		*(str + i) = *(str + i) - 32;
 		}
