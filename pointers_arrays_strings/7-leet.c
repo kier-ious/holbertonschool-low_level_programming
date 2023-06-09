@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * leet - encode string into 1337
- * str: string to be moded
+ * @str: string to be moded into 1337
  * Return: result
  */
 char *leet(char *str)
@@ -15,7 +15,7 @@ char *leet(char *str)
 
 	while (str[i] != '\0')
 	{
-		for (j = 0; j <= 11; j++)
+		for (j = 0; j <= 10; j++)
 		{
 			if (str[i] == a[j])
 			{
