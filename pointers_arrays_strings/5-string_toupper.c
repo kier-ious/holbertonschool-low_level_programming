@@ -2,20 +2,21 @@
 #include <stdio.h>
 /**
  * string_toupper - change lowercase to uppercase
+ * @str: string
  * Return: 0
  */
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
 	char * = p, p = 0;
 	int i;
 
-	while (*(p + i) != '\0')
+	while (*(str + i) != '\0')
 	{
-		if (*(p + i) >= 'a' && *(p + i) <= 'z')
+		if (*(str + i) >= 'a' && *(str + i) <= 'z')
 		{
-			*(p + i) = *(p + i) -27;
+			*(str + i) = *(str + i) - 27;
 		}
 		i++;
 	}
-	return(p);
+	return (str);
 }
