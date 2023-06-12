@@ -3,9 +3,10 @@
 #include <stdio.h>
 /**
  * _strchr - locates a character in a string
- * @s: source
- * @c: character
- * Return: located character
+ * @s: string to check
+ * @s: return NULL is character isn't found
+ * @c: character to be located
+ * Return: new string
  */
 char *_strchr(char *s, char c)
 {
@@ -20,7 +21,7 @@ char *_strchr(char *s, char c)
 	}
 	if (c == '\0')
 
-		return (s);
 
 		return (NULL);
+
 }
