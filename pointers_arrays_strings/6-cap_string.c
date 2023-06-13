@@ -3,7 +3,7 @@
 /**
  * cap_string - write a function that capitalizes all words in a string
  * @str: string
- * Return:
+ * Return: void
  */
 char *cap_string(char *str)
 {
@@ -11,26 +11,27 @@ char *cap_string(char *str)
 	int a[99];
 	i = 0;
 
-	while *(src[i] != '\0')
+
+	while (str[i] != '\0')
 	{
-		if (src[i] >='a' && src[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			if (i == 0)
 			{
-				src[i] = src[i] - 50;
+				str[i] = str[i] - 32;
 			}
 			else
 			{
-				for (j = 0; j <= 50; j++)
+				for (j = 0; j <= 32; j++)
 				{
-					if (a[j] == (src[i] -1))
+					if (a[j] == (str[i] - 1))
 					{
-						src[i] = src[i] - 50;
+						str[i] = str[i] - 32;
 					}
 				}
 			}
 		}
-		
+
 	i++;
 	}
 	return (str);
