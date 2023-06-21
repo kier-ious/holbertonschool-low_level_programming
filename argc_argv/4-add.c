@@ -15,22 +15,35 @@ int main(int argc, char **argv)
 
 	if (argc < 1)
 	{
-		for (; x < argc; x++)
+	printf("0\n");
+	return (0);
+	}
+
+
+	for (; x = 1; x < argc; x++)
+	{
+
+		int y = 1;
+
+	for (y = 0; argv[x][y] != '\0'; y++)
+	{
+		if (!x(argv[x][y]))
 		{
-			for (; argv[x][y] != '\0'; y++)
-			{
-				if (argv[x][y] < 48 || argv[x][y] > 57)
-
-					printf("Error\n");
-
-			return (1);
-
-			sum += atoi(argv[x]);
-
-			}
+			x = 0;
+			break;
 		}
 	}
 
-	return (0);
+		if (!y)
+		{
+		printf("Error\n");
+		return (1);
+		}
 
+		sum += atoi(argv[x]);
+	}
+
+	printf("%d\n", sum);
+
+	return (0);
 }
