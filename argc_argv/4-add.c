@@ -31,10 +31,10 @@ int main(int argc, char **argv)
 
 				return (1); /* Return 1 to indicate an error */
 			}
-
-			sum += atoi(argv[i]); /* Converts argument to integer and add */
-
 		}
+		sum += atoi(argv[i]); /* Converts argument to integer and add */
+
+
 	}
 	printf("%d\n", sum); /* Prints sum of all arguments */
 
