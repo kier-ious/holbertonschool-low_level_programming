@@ -1,49 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * main - adds positive numnbers
- * @argc: number of characters
- * @argv: string of array
- * Return: 0
+ * @argc: number of arghuments passed to a program
+ * @argv: array of pointers to an argument
+ * Return: 0 (successful) 1 if one of the arrays contains non digits
+ * This program takes in the argc and argv parameters in the main function.
+ * It uses a loop to iterate over each argument and checks if it contains
+ * only digits. If an argument contains non-digits, the program prints an
+ * error message and returns 1. Otherwise, it converts the argument to an
+ * integer, adds it to a sum variable, and continues with the next argument.
+ * After all arguments have been processed, the program prints the sum.
  */
 int main(int argc, char **argv)
 {
-	int sum = 0;
-	int x = 0;
-	int y = 0;
-
-	if (argc < 1)
-	{
-	printf("0\n");
-	return (0);
-	}
+	int i, j, sum = 0;
 
 
-	for (; x = 1; x < argc; x++)
+	for (i = 1; i < argc; i++) /* Loops over each argument */
 	{
 
-		int y = 1;
-
-	for (y = 0; argv[x][y] != '\0'; y++)
-	{
-		if (!x(argv[x][y]))
+		for (j = 0; argv[i][j]; j++) /* Loops over each character in argument */
 		{
-			x = 0;
-			break;
+
+			if (!isdigit(argv[i][j])) /* Checks if character is not a digit */
+			{
+				printf("Error\n"); /* Prints an error message */
+
+				return (1); /* Return 1 to indicate an error */
+			}
+
+			sum += atoi(argv[i]); /* Converts argument to integer and add */
+
 		}
+		printf("%d\n", sum); /* Prints sum of all arguments */
+
+		return (0); /* Return 0 to indicate success */
 	}
 
-		if (!y)
-		{
-		printf("Error\n");
-		return (1);
-		}
-
-		sum += atoi(argv[x]);
-	}
-
-	printf("%d\n", sum);
-
-	return (0);
 }
