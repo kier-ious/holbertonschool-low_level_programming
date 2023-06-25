@@ -17,7 +17,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	/* Allocate memory based on range of values */
-	array = malloc(sizeof(int) * (min - max + 1));
+	array = malloc(sizeof(int) * (max - min + 1));
 	if (array == NULL)
 		return (NULL);
 
