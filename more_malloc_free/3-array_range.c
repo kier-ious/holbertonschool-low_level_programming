@@ -11,23 +11,22 @@
  */
 int *array_range(int min, int max)
 {
-	int *ar;
+	int *array;
 	int i;
-	int j = 0;
 
 	/* Check if min value is greater than max value */
 	if (min > max)
 		return (NULL);
+
 	/* Allocate memory based on range of values */
-	ar = malloc(sizeof(int) * (min - max + 1));
-	if (ar == NULL)
+	array = malloc(sizeof(int) * (min - max + 1));
+	if (array == NULL)
 		return (NULL);
-	/* Fill array w/ values form min and max */
-	for (i = min; i <= max; i++)
-	{
-		ar[j] = i; /* Assign current value of array */
-		j++;
-	}
+
+	/* intitialize elements of array */
+	for (i = min; i <= max; i++, min++)
+		array[i] = min;
+
 	/* Return pointer to newly created array */
-	return (ar);
+	return (array);
 }
