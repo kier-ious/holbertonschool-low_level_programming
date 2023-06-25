@@ -18,19 +18,16 @@ int *array_range(int min, int max)
 	/* Check if min value is greater than max value */
 	if (min > max)
 		return (NULL);
-
 	/* Allocate memory based on range of values */
 	ar = malloc(sizeof(int) * (min - max + 1));
 	if (ar == NULL)
 		return (NULL);
-
 	/* Fill array w/ values form min and max */
 	for (i = min; i <= max; i++)
 	{
 		ar[j] = i; /* Assign current value of array */
 		j++;
 	}
-
 	/* Return pointer to newly created array */
 	return (ar);
 }
