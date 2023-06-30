@@ -16,17 +16,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *ocpy; /* ptr to hold the duplicated owner swtring */
 
 	new = malloc(sizeof(dog_t));
-	if (new == NULL)
-		return (NULL); /* if malloc fails return NULL */
-
-
-	ncpy = strdup(name);
-	if (!ncpy && name)
-	{
+		if (new == NULL)
+			return (NULL); /* if malloc fails return NULL */
 		free(new);
-		return (NULL); /* if name duplication fails and name isn't NULL */
+
+
+		ncpy = strdup(name);
+		if (!ncpy && name)
+		{
+			free(new);
+			return (NULL); /* if name duplication fails and name isn't NULL */
 				 /* free mem and return NULL */
-	}
+		}
 
 		ocpy = strdup(owner);
 		if (!ocpy && owner)
