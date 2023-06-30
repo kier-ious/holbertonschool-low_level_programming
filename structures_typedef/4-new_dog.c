@@ -19,6 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new == NULL)
 		return (NULL); /* if malloc fails return NULL */
 
+
 	ncpy = strdup(name);
 	if (!ncpy && name)
 	{
@@ -27,14 +28,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 				 /* free mem and return NULL */
 	}
 
-	ocpy = strdup(owner);
-	if (!ocpy && owner)
-	{
-		free(ocpy);
-		free(new);
-		return (NULL); /* if owner duplication fails and owner isn't NULL */
+		ocpy = strdup(owner);
+		if (!ocpy && owner)
+		{
+			free(ocpy);
+			free(new);
+			return (NULL); /* if owner duplication fails and owner isn't NULL */
 				 /* free mem and return NULL */
-	}
+		}
 
 	/* assign new age, name and owner to new dog struct */
 	new->name = ncpy;
