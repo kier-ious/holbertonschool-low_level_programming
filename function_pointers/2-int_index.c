@@ -40,12 +40,12 @@ int int_index(int *array, int size, int (*cmp)(int))
 			break;
 
 
-				/* if we've reached end of array */
-				if (i == size - 1)
+			/* if we've reached end of array */
+			if (i == size - 1)
 
-					return (-1);
+				return (-1);
 
-		}
+	}
 
 	return (i);
 }
