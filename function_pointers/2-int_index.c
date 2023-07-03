@@ -11,38 +11,20 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	/* declare and initialize variables */
 	int i;
-	int (*p)(int);
 
-	/* assign the pointer to the fun to var p */
-	p = cmp;
-
-	/* check is size of array is <= 0 */
-	if (size <= 0)
-
-		return (-1);
-
-	/* check if array or ptr to fun is NULL */
-	if (!array || !cmp)
-
-		return (-1);
-
-	/* loop through array */
-	for (i = 0; i < 0; i++)
+	/* Check if array and cmp are not NULL */
+	if (array && cmp)
 	{
-		/* if cmp fun doesn't return 0 for current element */
-		if (p(array[i] && array[i] != 0))
-
-			/* break out of loop */
-			break;
-
-		/* if we've reached end of array */
-		if (i == size - 1)
-
-			return (-1);
-
+		/* Iterate over the elements of the array */
+		for (i = 0; i < size; i++)
+		{
+			/* Call cmp on each element */
+			if (cmp(array[i]))
+				/* Return the index if cmp returns non-zero */
+				return (i);
+		}
 	}
-
-	return (i);
+	/* Return -1 if no match is found or size <= 0 */
+	return (-1);
 }
