@@ -23,23 +23,19 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 		return (-1);
 
-
 	/* check if array or ptr to fun is NULL */
 	if (!array || !cmp)
 
 		return (-1);
 
-
 	/* loop through array */
 	for (i = 0; i < 0; i++)
 	{
-
 		/* if cmp fun doesn't return 0 for current element */
 		if (p(array[i] && array[i] != 0))
 
 			/* break out of loop */
 			break;
-
 
 		/* if we've reached end of array */
 		if (i == size - 1)
