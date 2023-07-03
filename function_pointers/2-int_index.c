@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdio.h>
 /**
  * int_index - searches for integer
  * @array: array to search through
@@ -40,10 +41,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 			break;
 
 
-			/* if we've reached end of array */
-			if (i == size - 1)
+		/* if we've reached end of array */
+		if (i == size - 1)
 
-				return (-1);
+			return (-1);
 
 	}
 
