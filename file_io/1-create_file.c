@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * create_file - created file must have those permissions: rw-------
+ * create_file - creates a file with rw------- permissions
  * @filename: name given on saved file
- * @text_content: the null terminating string to fill in
+ * @text_content: contents of the file. If NULL, create an empty file
  * Returns: 1 on success, -1 on failure
- * (file can not be created, file can not be written, write “fails”
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -25,5 +24,5 @@ int create_file(const char *filename, char *text_content)
 	wr_stat = write(new_file, text_content, len);
 	if (close(new_file) == -1)
 		return (-1);
-	return (wr_stat == -1 ? -1 : 1);
+	return (wr_stat == 1);
 }
