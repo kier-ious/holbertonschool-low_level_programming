@@ -24,5 +24,6 @@ int create_file(const char *filename, char *text_content)
 	wr_stat = write(new_file, text_content, len);
 	if (close(new_file) == -1)
 		return (-1);
-	return (wr_stat == 1);
+	return (wr_stat == -1 ? -1 : 1);
+
 }
