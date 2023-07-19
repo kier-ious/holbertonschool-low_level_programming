@@ -1,6 +1,7 @@
 # C - Doubly linked lists
 ## Synopsis
 - A doubly linked list (DLL) is a special type of linked list in which each node contains a pointer to the previous node as well as the next node of the linked list.
+  
   <img width="641" alt="image" src="https://github.com/kier-ious/holbertonschool-low_level_programming/assets/126838794/f55a2094-c097-4d8c-8cf9-7c0f191a7538">
 
 ---
