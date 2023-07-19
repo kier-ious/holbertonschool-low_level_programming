@@ -6,9 +6,9 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t i;
+	size_t i; /* counter var for # of items */
 
-	for (i = 0; h; i++)
-		h = h->next;
-	return (i);
+	for (i = 0; h; i++) /* iterate thru list until NULL is reached */
+		h = h->next; /* move to the next node */
+	return (i); /* return count in list */
 }
