@@ -3,7 +3,7 @@
  * add_dnodeint - adds node at the head of DLL
  * @head: head of the linked list
  * @n: value to add to the list
- * Return: pointer to the element added
+ * Return: & of new node, return NULL if it fails
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -14,8 +14,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (tmp == NULL)
 		return (NULL);
 	tmp->n = n; /* assigns value to new node */
-	tmp->prev = NULL;
 	tmp->next = *head;
-	*head = tmp; /* update head and return new node */
-	return (tmp);
+	tmp->prev = NULL;
+
+	if ((*head) != NULL)
+		(*head)->prev = tmp;
+	(*head) = tmp;
+
+	return (*head);
 }
