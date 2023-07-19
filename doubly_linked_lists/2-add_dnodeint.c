@@ -7,16 +7,15 @@
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *temp; /* temp ptr var */
+	dlistint_t *tmp; /* tmp pointer to var */
 
-	temp = *head; /* store current head in temp */
-	temp = malloc(sizeof(dlistint_t)); /* allocate memory for new node */
-	if (temp == NULL)
+	tmp = *head; /* store current head in tmp */
+	tmp = malloc(sizeof(dlistint_t)); /* allocate mem for new node */
+	if (tmp == NULL)
 		return (NULL);
-
-	temp->n = n; /*assigns value to new node */
-	temp->prev = NULL;
-	temp->next = *head;
-	*head = temp; /* update head & return new node */
-	return (temp);
+	tmp->n = n; /* assigns value to new node */
+	tmp->prev = NULL;
+	tmp->next = *head;
+	*head = tmp; /* update head and return new node */
+	return (tmp);
 }
