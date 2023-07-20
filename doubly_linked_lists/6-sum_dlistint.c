@@ -6,12 +6,18 @@
   */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum; /* var to store sum of nodes */
+	dlistint_t *current; /* ptr to traverse in list */
+	int sum; /* var to store sum of ints in list */
 
-	while (head) /* loop until head pointer is NULL */
+	if (head == NULL) /* if head is NULL return 0 */
+		return (0);
+	current = head; /* start from the head of the list */
+	sum = 0; /* intitialize sum to 0 */
+
+	while (current != NULL) /* loop until head pointer is NULL */
 	{
-		sum += head->n; /* add value of current node to sum */
-		head = head->next; /* move head ptr to the nxt node */
+		sum += current->n; /* add value of current node to sum */
+		current = current->next; /* move head ptr to the nxt node */
 	}
 	return (sum);
 }
