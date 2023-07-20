@@ -13,22 +13,23 @@ Following are the important terms to understand the concept of doubly linked lis
 
 - Prev − Each link of a linked list contains a link to the previous link called Prev.
 ---
-Basic Operations
-- Insertion − Adds an element at the beginning of the list.
+Add a node at the front in a Doubly Linked List:
+The new node is always added before the head of the given Linked List. The task can be performed by using the following 5 steps:
 
-- Deletion − Deletes an element at the beginning of the list.
-
-- Insert Last − Adds an element at the end of the list.
-
-- Delete Last − Deletes an element from the end of the list.
-
-- Insert After − Adds an element after an item of the list.
-
-- Delete − Deletes an element from the list using the key.
-
-- Display forward − Displays the complete list in a forward manner.
-
-- Display backward − Displays the complete list in a backward manner.
+1. Firstly, allocate a new node (say new_node).
+2. Now put the required data in the new node.
+3. Make the next of new_node point to the current head of the doubly linked list.
+4. Make the previous of the current head point to new_node.
+5. Lastly, point head to new_node.
+---
+Add a node after a given node in a Doubly Linked List:
+We are given a pointer to a node as prev_node, and the new node is inserted after the given node. This can be done using the following 6 steps:
+1. Firstly create a new node (say new_node).
+2. Now insert the data in the new node.
+3. Point the next of new_node to the next of prev_node.
+4. Point the next of prev_node to new_node.
+5. Point the previous of new_node to prev_node.
+6. Change the pointer of the new node’s previous pointer to new_node.
 
 Advantages over singly linked list
 A DLL can be traversed in both forward and backward direction.
