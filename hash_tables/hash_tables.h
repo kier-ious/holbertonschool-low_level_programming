@@ -1,13 +1,11 @@
-#ifndef LIBS
-#define LIBS
+#ifndef HASH_TABLES_H
+#define HASH_TABLES_H
 
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef HEADER_H
-#define HEADER_H
 /*This is the document for all the prototypes*/
 /**
  * struct hash_node_s - Node of a hash table
