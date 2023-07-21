@@ -1,9 +1,10 @@
 #include "hash_tables.h"
+#include <string.h>
 /**
  * create_node - creates a new key-value entry
  * @key: the key to add
  * @value: the value to add to the key
- * Returns: the node
+ * Return: the node
  */
 hash_node_t *create_node(const char *key, const char *value)
 {
@@ -38,12 +39,13 @@ hash_node_t *create_node(const char *key, const char *value)
 	return (new_node);
 }
 /**
-  * hash_table_set - set a key:value pair
-  * @ht: Hash table to set
-  * @key: key to set
-  * @value: value to set at key
-  * Return: 1 on success, 0 on failure
-  */
+ * hash_table_set - set a key:value pair
+ * create_node - creates new node for the hash table
+ * @ht: Hash table to set
+ * @key: key to set
+ * @value: value to set at key
+ * Return: 1 on success, 0 on failure
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
