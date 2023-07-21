@@ -26,8 +26,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		/* loop through LL until key is found or end is reached */
 		while (tmp && strncmp(tmp->key, key, strlen(key)) != 0)
 			tmp = tmp->next;
-		
+		/* if key is found return value, otherwise NULL */
 		return (tmp != NULL ? tmp->value : NULL);
 	}
+	/* if node doesn't exisit node isn't present in HT */
 	return (NULL);
 }
