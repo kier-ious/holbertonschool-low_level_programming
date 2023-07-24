@@ -1,48 +1,54 @@
 #include "hash_tables.h"
+
+void delete_node(hash_node_t *);
 /**
-  * hash_table_delete - delete the whole hash table
-  * @ht: the hash table
-  */
+ * hash_table_delete - delete a hash table.
+ * @ht: hash table to delete.
+ *
+ */
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int i;
-	hash_node_t *tmp;
+	hash_node_t *node;
+	unsigned long int idx = 0;
 
-	/* check is HT is NULL */
-	if (ht == NULL)
-		return;
-
-	/* loop thru each index of the array */
-	for (i = 0; i < ht->size; i++)
+	/* loop through each index of the array */
+	while (idx < ht->size)
 	{
 		/* check if current index isn't empty */
-		if (ht->array[i] != NULL)
+		if (ht->array[idx])
 		{
-			/* free all nodes in LL @ current index */
-			printf("First for loop\n");
-			while (ht->array[i])
-			{
-				printf("Freeing\n");
-				tmp = ht->array[i];
-				/* free mem for the key & set to NULL */
-				free(tmp->key);
-				tmp->key = NULL;
-				/* free mem for the value and set to NULL */
-				free(tmp->value);
-				tmp->value = NULL;
-				/* move to the next node in the LL */
-				ht->array[i] = ht->array[i]->next;
-				/* free current node */
-				free(tmp);
-				tmp = NULL;
-			}
+			node = ht->array[idx];
+			/* delete LL of nodes recursively */
+			delete_node(node);
 		}
+		idx++;
 	}
-	/* free the array of the HT and set to NULL */
+	/* free array of the HT */
 	free(ht->array);
-	ht->array = NULL;
-	/* free HT itself and set to NULL */
+	/* free HT itself */
 	free(ht);
-	ht = NULL;
-	printf("Leaving\n");
 }
+
+/**
+ * delete_node - deletes a bucket
+ * @node: nodes to delete
+ */
+void delete_node(hash_node_t *node)
+{
+	hash_node_t *tmp;
+
+	while (node)
+	{
+		tmp = node;
+		/* free mem for allocated key */
+		free(node->key);
+		/* free mem for allocated value if not NULL */
+		if (node->value)
+			free(node->value);
+		/* move to next node in bucket */
+		node = node->next;
+		/* free current node */
+		free(tmp);
+	}
+}
+
